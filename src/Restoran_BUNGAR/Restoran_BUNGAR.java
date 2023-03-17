@@ -1,14 +1,29 @@
 package Restoran_BUNGAR;
 
 import java.text.DecimalFormat;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Restoran_BUNGAR {
     private static final DecimalFormat df = new DecimalFormat("0.00");
     public static void main(String[] args) {
-        System.out.println("\t\tSelamat Siang....");
+        // Pengucapan Salam
+        int jam = LocalDateTime.now().getHour();
+        String waktu = null;
+        if (jam <= 10){
+            waktu = "Pagi";
+        } else if (jam > 10 && jam <= 14) {
+            waktu = "Siang";
+        } else if (jam > 14 && jam < 17){
+            waktu = "Sore";
+        } else {
+            waktu = "Malam";
+        }
+        System.out.println("Selamat "+ waktu +"...");
+
+        // Jumlah Pemesan
         Scanner input = new Scanner(System.in);
-        System.out.print("\t\tPesan untuk berapa orang :");
+        System.out.print("Pesan untuk berapa orang :");
         int jumlah = input.nextInt();
         System.out.print("\t\tPesanan atas nama :");
         String nama = input.next();
