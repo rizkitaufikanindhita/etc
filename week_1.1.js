@@ -79,3 +79,23 @@ let doAritmetic = (a, b, func) => {
   return func(a, b);
 };
 console.log(doAritmetic(10, 5, sum));
+
+// fibonachi
+let fibonachi = (a, b) => {
+  let result = [];
+  for (i = a; i <= b; i++) {
+    if (i < 3) {
+      result.push(i - 1);
+    } else {
+      let hasil = result[i - 2] + result[i - 3];
+      result.push(hasil);
+    }
+  }
+  return result;
+};
+
+console.log(fibonachi(1, 9));
+
+// pattern pyramid
+
+// mulai dari 43:00 week 1.1
