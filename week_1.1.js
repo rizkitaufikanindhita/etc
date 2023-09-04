@@ -97,5 +97,15 @@ let fibonachi = (a, b) => {
 console.log(fibonachi(1, 9));
 
 // pattern pyramid
+let pyramid1 = (numberOfRow) => {
+  for (i = 0; i < numberOfRow; i++) {
+    let bintang = "";
+    for (j = 0; j < i + 1; j++) {
+      bintang = bintang + "*";
+    }
+    console.log(bintang);
+  }
+};
+pyramid1(10);
 
 // mulai dari 43:00 week 1.1
