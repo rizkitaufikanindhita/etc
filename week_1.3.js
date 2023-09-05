@@ -46,4 +46,6 @@ for (i = 0; i < 10000000000; i++) {
 }
 console.log(result);
 
-// lanjut week 1.3 - 43:00
+// simulasi call stack, web apis, callback queue, event loop di http://latentflip.com/loupe
+
+// lanjut week 1.3 01:08:00
