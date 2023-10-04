@@ -4,6 +4,10 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Brand;
+use illuminate\Support\Str;
+use yanjra\Datatables\Datatables;
+use App\Http\Requests\BrandRequest;
 
 class BrandController extends Controller
 {
