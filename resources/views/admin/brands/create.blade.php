@@ -43,11 +43,10 @@
                 </div>
               </div>
             </div>
-  
             <div class="flex flex-wrap mb-6 -mx-3">
               <div class="w-full px-3 text-right">
                 <button type="submit"
-                        class="px-4 py-2 font-bold text-white bg-green-500 rounded shadow-lg hover:bg-green-700">
+                  class="px-4 py-2 font-bold text-black bg-green-500 rounded shadow-lg hover:bg-green-700">
                   Simpan Brand
                 </button>
               </div>
