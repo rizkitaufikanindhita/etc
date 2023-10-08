@@ -21,6 +21,9 @@
                     <x-nav-link href="{{ route('admin.types.index') }}" :active="request()->routeIs('admin.dashboard')">
                         {{ __('Type') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('admin.items.index') }}" :active="request()->routeIs('admin.dashboard')">
+                        {{ __('Item') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -149,10 +152,13 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('admin.brands.index') }}" :active="request()->routeIs('admin.dashboard')">
-                {{ __('Brands') }}
+                {{ __('Brand') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('admin.types.index') }}" :active="request()->routeIs('admin.dashboard')">
-                {{ __('Types') }}
+                {{ __('Type') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('admin.items.index') }}" :active="request()->routeIs('admin.dashboard')">
+                {{ __('Item') }}
             </x-responsive-nav-link>
         </div>
 
