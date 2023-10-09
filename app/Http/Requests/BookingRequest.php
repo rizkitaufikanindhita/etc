@@ -24,18 +24,18 @@ class BookingRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'start_date' => 'required|date',
-            'end_date' => 'required|date',
-            'address' => 'required|string',
-            'city' => 'required|string',
-            'zip' => 'required|numeric',
-            'status' => 'required|string',
-            'payment_method' => 'required|string|default:midtrans',
-            'payment_status' => 'required|string|in:SUCCESS,PENDING,CANCELLED',
+            'start_date' => 'nullable|date',
+            'end_date' => 'nullable|date',
+            'address' => 'nullable|string',
+            'city' => 'nullable|string',
+            'zip' => 'nullable|numeric',
+            'status' => 'nullable|string',
+            'payment_method' => 'nullable|string|default:midtrans',
+            'payment_status' => 'nullable|string',
             'payment_url' => 'nullable|string',
-            'total_price' => 'required|numeric',
-            'items_id' => 'required|integer|exists:items,id',
-            'users_id' => 'required|integer|exists:users,id',
+            'total_price' => 'nullable|numeric',
+            'items_id' => 'nullable|integer|exists:items,id',
+            'users_id' => 'nullable|integer|exists:users,id',
         ];
     }
 }

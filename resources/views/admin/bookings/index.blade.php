@@ -24,8 +24,12 @@
               name: 'id',
             },
             {
-              data: 'user.name',
+              data: 'user.name', // akan ambil dari table user kalau name aja ambil dari table booking column name
               name: 'user.name'
+            },
+            {
+              data: 'item.brand.name',
+              name: 'item.brand.name'
             },
             {
               // nama relationnya dari booking controller
@@ -78,7 +82,8 @@
               <thead>
                 <tr>
                   <th style="max-width: 1%">ID</th>
-                  <th>Nama</th>
+                  <th>User</th>
+                  <th>Brand</th>
                   <th>Item</th>
                   <th>Mulai</th>
                   <th>Selesai</th>
