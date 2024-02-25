@@ -11,15 +11,37 @@ import { AccountInfo } from './account-info';
       <section class="membership-info">
         <p>
           <!-- name -->
-          {{ '' }}
+          @if (account.name) {
+            {{account.name}}
+          } @else {
+            {{ '-' }}
+          }
         </p>
-        <p>Valid Thru: {{ '' }}</p>
-        <p>CVV: {{ '' }}</p>
+        <p>Valid Thru: @if (account.validThru){
+          {{account.validThru}}
+        } @else {
+          {{ '-' }}
+        } </p>
+        <p>CVV: @if(account.CVV){
+          {{account.CVV}}  
+        } @else {
+          {{ '-' }}
+        }</p>
         <p>
           <!-- membership status -->
-          <span class="badge gold">Gold</span>
-          <span class="badge platinum">Platinum</span>
-          <span class="badge silver">Silver</span>
+          @if(account.membershipStatus == 'gold'){
+            <span class="badge gold">Gold</span>
+          } @else if (account.membershipStatus == 'platinum') {
+            <span class="badge platinum">Platinum</span>
+          } @else {
+            <span class="badge silver">Silver</span>
+          }
+          <!-- atau -->
+          <!-- @switch (account.membershipStatus) {
+            @case ('gold') {<span class="badge gold">Gold</span>}
+            @case ('platinum') {<span class="badge platinum">Platinum</span>}
+            @default {<span class="badge silver">Silver</span>}
+          } -->
         </p>
       </section>
     </article>
@@ -28,7 +50,7 @@ import { AccountInfo } from './account-info';
 })
 export class AppComponent {
   account: AccountInfo = {
-    name: 'Melisa Evan',
+    name: 'Rizki Taufik',
     membershipStatus: 'gold',
     validThru: '12/2022',
     CVV: '123',

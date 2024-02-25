@@ -9,7 +9,21 @@ import { RouterOutlet } from '@angular/router';
   template: `
     <h1>If you are reading this...</h1>
     <p>Things have worked out well! 🎉</p>
+    <h1>Hello from Rizki</h1>
+    <h2>List Favorite Movies</h2>
+    <ol>
+      <li *ngFor="let item of listMovie">
+    {{item}}</li>
+    </ol>
+    <h2>
+      Welcome Back {{userName}}
+    </h2>
   `,
-  styles: ``,
+  styles: `ol{
+    list-style-type: upper-roman
+    }`,
 })
-export class AppComponent {}
+export class AppComponent {
+  userName: String = 'Rizki Taufik'
+  listMovie = ['Inception','Shutter Island','The Wolf of Wall Street']
+}
