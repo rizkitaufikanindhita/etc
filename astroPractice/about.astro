@@ -1,0 +1,14 @@
+---
+import "@/styles/globals.css";
+import { Button } from "@/components/ui/button";
+import Layouts from "../layouts/Layouts.astro";
+import Link from "../components/Link.astro";
+const page: string = "About Page";
+const title: string = "About";
+const body: string = "Rizki Taufik";
+---
+
+<Layouts title={title} body={body}>
+  <h1>{page}</h1>
+  <Button><Link link="/" judul="homepage" /></Button>
+</Layouts>
